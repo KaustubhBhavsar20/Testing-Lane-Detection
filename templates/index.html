@@ -1,0 +1,219 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lane Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+        header h1 {
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+        }
+        .button {
+            display: inline-block;
+            margin: 20px;
+            padding: 15px 25px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .upload-form {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lane Detection</h1>
+    </header>
+    <main>
+        <h2>Select an Option</h2>
+    -->
+        <!-- Button to start camera -->
+       <!--<a href="/start-camera" class="button">Open Camera</a>-->
+
+        <!-- Form to upload video -->
+     <!-- <form class="upload-form" action="/process-video" method="POST" enctype="multipart/form-data">
+            <label for="video">Upload Video:</label>
+            <input type="file" name="video" id="video" accept="video/*" required>
+            <br><br>
+            <button type="submit" class="button">Upload and Process</button>
+        </form>
+    </main>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lane Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            color: #333;
+            text-align: center;
+        }
+
+        .header {
+            background-color: #003366; 
+            color: white; 
+            padding: 40px 20px;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: -130px;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            font-style: italic;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 20px;
+            padding: 15px 25px;
+            font-size: 16px;
+            color: white;
+            background-color: #003366;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .upload-form {
+            margin-top: 20px;
+        }
+
+        input[type="file"] {
+            margin: 10px 0;
+            padding: 15px;
+            background-color: #f8f8f8;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            padding: 12px 25px;
+            background-color: #003366;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 15px;
+            width: 100%;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .go-back-btn {
+            background-color: #003366;
+            color: white; 
+            padding: 12px 25px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none; 
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .go-back-btn:hover {
+            background-color: #003366; 
+            transform: scale(1.05);  
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Lane Detection- OpenCV Project</h1>
+        <div style="display: flex;margin-top: 10px;">
+            <div style="margin: auto;">
+                <p>Kaustubh Bhavsar</p>
+                <p>202101040161 | Roll No. 213</p>
+            </div>
+            <div style="margin: auto;">
+                <p>Aditya Joshi</p>
+                <p>202101040132 | Roll No. 204</p>
+            </div>
+            <div style="margin: auto;">
+                <p>Pritee Shingate</p>
+                <p>202101040153 | Roll No. 211</p>
+            </div>
+            <div style="margin: auto;">
+                <p>Tejas Pingale</p>
+                <p>202101040040 | Roll No. 040</p>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <h2>Select an Option</h2>
+
+        <!-- Button to start camera -->
+        <a href="/start-camera" class="button">Open Camera</a>
+
+        <!-- Form to upload video -->
+        <form class="upload-form" action="/process-video" method="POST" enctype="multipart/form-data">
+            <label for="video">Upload Video:</label>
+            <input type="file" name="video" id="video" accept="video/*" required>
+            <br><br>
+            <button type="submit" class="button">Upload and Process</button>
+        </form>
+    </main>
+</body>
+</html>
